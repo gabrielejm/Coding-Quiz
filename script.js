@@ -24,7 +24,7 @@ var questions = [{
   answer: "var myName;"
 }];
 
-var timeLeft = 90;
+var seconds = 10;
 var timer;
 var questionIndex = 0;
 var timerEl = document.getElementById("timer")
@@ -39,15 +39,27 @@ var endBtn = document.getElementById("submit-btn");
 startBtn.addEventListener("click", function() {
   startEl.setAttribute("class", "hide");
   questionsEl.removeAttribute("class");
+  
 });
 
 //function to start the timer
   //internal function to run if the user runs out of time
     //call the end function
+timer = setInterval(function() {
+  seconds--;
+  document.getElementById("timer").textContent = seconds;
+  if (seconds === 0) {
+    clearInterval(timer);
+    alert("You have run out of time!"); //invoke end function here once created
+  }
+}, 1000);
+  
 
 
 //function to get/display current question
-
+function currentQuestion() {
+  
+};
 //function to capture when user clicks on answer buttons
   //check: did the user get the question right? (if/else)
     //report to the user whether they got question correct or not
@@ -55,10 +67,17 @@ startBtn.addEventListener("click", function() {
         //check if there are more questions to display
           //if there are more questions, call the get question function
             //if there are no more questions or run out of time, call end game function
-
+function userAnswer() {
+  
+};
 
   //in the end game function, stop the timer, display user score, show input box for initials, wait for user to click submit
-
+function endGame() {
+  
+};
   //function for when the user clicks submit, thats stores score and initials
     //windows.location.href = file name of highscore html page
 
+function clickSubmit() {
+  
+};
