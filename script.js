@@ -1,27 +1,27 @@
 var questions = [{
-  title: "What is 1 + 1?", 
-  choices: ["2", "5", "3", "7"],
-  answer: "2"
+  title: "Who created Javascript?", 
+  choices: ["Arnold Schwarzenegger", "Brendan Eich", "Bill Gates", "Guido van Rossum"],
+  answer: "Brendan Eich"
 },
 {
-  title:"",
-  choices: ["", "", "", ""],
-  answer: ""
+  title:"Inside which HTML element do we write Javascript?",
+  choices: ["<body>", "<scripting>", "<script>", "<javascript>"],
+  answer: "<script>"
 },
 {
-  title:"",
-  choices: ["", "", "", ""],
-  answer: ""
+  title:"How do you create a function in Javascript?",
+  choices: ["function = myFunction()", "myFunction() = function", "function:myFunction()", "function myFunction()"],
+  answer: "function myFunction()"
 },
 {
-  title:"",
-  choices: ["", "", "", ""],
-  answer: ""
+  title:"Which symbol is used to wrap an array?",
+  choices: ["[]", "()", "{}", "//"],
+  answer: "[]"
 },
 {
-  title:"",
-  choices: ["", "", "", ""],
-  answer: ""
+  title:"How do you declare a Javascript variable?",
+  choices: ["variable = myName;", " v myName;", "var myName;", "variable myName;"],
+  answer: "var myName;"
 }];
 
 var timeLeft = 90;
