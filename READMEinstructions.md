@@ -66,3 +66,11 @@ var endScore = document.getElementById("score");
 var initials = document.getElementById("initials");
 var endBtn = document.getElementById("submit-btn");
 var shuffledQuestions = questions[Math.floor(Math.random() * questions.length)];
+
+function resetState() {
+  nextButton.classList.add("hide")
+  while (answerButtonsEl.firstChild) {
+    answerButtonsEl.removeChild
+    (answerButtonsEl.firstChild)
+  }
+}

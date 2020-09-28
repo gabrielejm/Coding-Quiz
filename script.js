@@ -1,30 +1,31 @@
 const questions = [{
   question: "Who created Javascript?", 
-  choices: ["Arnold Schwarzenegger", "Brendan Eich", "Bill Gates", "Al Gore"],
-  answer: "Brendan Eich"
+  answers: ["Arnold Schwarzenegger", "Brendan Eich", "Bill Gates", "Al Gore"],
+  correct: "Brendan Eich"
 },
 {
   question:"Inside which HTML element do we write Javascript?",
-  choices: ["<body>", "<scripting>", "<script>", "<javascript>"],
-  answer: "<script>"
+  answers: ["<body>", "<scripting>", "<script>", "<javascript>"],
+  correct: "<script>"
 },
 {
   question:"How do you create a function in Javascript?",
-  choices: ["function = myFunction()", "myFunction() = function", "function:myFunction()", "function myFunction()"],
-  answer: "function myFunction()"
+  answers: ["function = myFunction()", "myFunction() = function", "function:myFunction()", "function myFunction()"],
+  correct: "function myFunction()"
 },
 {
   question:"Which symbol is used to wrap an array?",
-  choices: ["[]", "()", "{}", "//"],
-  answer: "[]"
+  answers: ["[]", "()", "{}", "//"],
+  correct: "[]"
 },
 {
   question:"How do you declare a Javascript variable?",
-  choices: ["variable = myName;", " v myName;", "var myName;", "variable myName;"],
-  answer: "var myName;"
+  answers: ["variable = myName;", " v myName;", "var myName;", "variable myName;"],
+  correct: "var myName;"
 }];
 
 const startButton = document.getElementById("start-btn");
+const nextButton = document.getElementById("next-btn");
 const questionContainerEl = document.getElementById("question-container");
 let shuffleQuestions, currentQuestionIndex;
 const questionEl = document.getElementById("question")
@@ -38,15 +39,19 @@ function startGame() {
   currentQuestionIndex = 0;
   questionContainerEl.classList.remove("hide");
   nextQuestion();
-}
+};
 
 function nextQuestion() {
   showQuestion(shuffleQuestions[currentQuestionIndex]);
-}
+};
 
 function showQuestion(question) {
   questionEl.innerText = question.question
-}
+
+};
+
+
+
 
 function selectAnswer() {
 
