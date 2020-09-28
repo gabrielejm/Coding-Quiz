@@ -40,3 +40,29 @@ You are required to submit the following for review:
 
 - - -
 © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+
+timer = setInterval(function() {
+  seconds--;
+  document.getElementById("timer").textContent = seconds;
+  if (seconds === 0) {
+    clearInterval(timer);
+    alert("You have run out of time!");
+
+    startBtn.addEventListener("click", function() {
+  startEl.setAttribute("class", "hide");
+  questionsEl.removeAttribute("class");
+  
+});
+
+var seconds = 10;
+var timer;
+var questionIndex = 0;
+var timerEl = document.getElementById("timer")
+var startEl = document.getElementById("start");
+var startBtn = document.getElementById("start-btn");
+var questionsEl = document.getElementById("questions");
+var end = document.getElementById("end");
+var endScore = document.getElementById("score");
+var initials = document.getElementById("initials");
+var endBtn = document.getElementById("submit-btn");
+var shuffledQuestions = questions[Math.floor(Math.random() * questions.length)];

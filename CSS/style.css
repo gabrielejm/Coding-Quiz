@@ -1,3 +1,57 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 800px;
+  max-width: 80%;
+  background-color: lightblue;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px 1px;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.btn {
+  border: 2px solid;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.btn:hover {
+  border-color: red;
+}
+
+.start-btn, .next-btn {
+  padding: 10px 20px;
+  font-size: 1.5rem;
+
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .hide {
   display: none;
 }
+
