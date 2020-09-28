@@ -1,4 +1,4 @@
-var questions = [{
+const questions = [{
   question: "Who created Javascript?", 
   choices: ["Arnold Schwarzenegger", "Brendan Eich", "Bill Gates", "Al Gore"],
   answer: "Brendan Eich"
@@ -24,13 +24,16 @@ var questions = [{
   answer: "var myName;"
 }];
 
-const startButton = document.getElementById("start-btn")
-const questionContainerElement = document.getElementById("question-container")
+const startButton = document.getElementById("start-btn");
+const questionContainerEl = document.getElementById("question-container");
+const shuffleQuestions, currentQuestionIndex;
 
 startButton.addEventListener("click", startGame)
 
 function startGame() {
   startButton.classList.add("hide");
+  questionContainerEl.classList.remove("hide");
+  nextQuestion();
 }
 
 function nextQuestion() {
