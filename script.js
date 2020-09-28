@@ -1,6 +1,6 @@
 var questions = [{
   title: "Who created Javascript?", 
-  choices: ["Arnold Schwarzenegger", "Brendan Eich", "Bill Gates", "Guido van Rossum"],
+  choices: ["Arnold Schwarzenegger", "Brendan Eich", "Bill Gates", "Al Gore"],
   answer: "Brendan Eich"
 },
 {
@@ -59,7 +59,7 @@ timer = setInterval(function() {
 
 //function to get/display current question
 function currentQuestion() {
-   
+  
 };
 //function to capture when user clicks on answer buttons
   //check: did the user get the question right? (if/else)
