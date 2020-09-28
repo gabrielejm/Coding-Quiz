@@ -26,18 +26,26 @@ const questions = [{
 
 const startButton = document.getElementById("start-btn");
 const questionContainerEl = document.getElementById("question-container");
-const shuffleQuestions, currentQuestionIndex;
+let shuffleQuestions, currentQuestionIndex;
+const questionEl = document.getElementById("question")
+const answerButtonsEl = document.getElementById("answer-buttons")
 
 startButton.addEventListener("click", startGame)
 
 function startGame() {
   startButton.classList.add("hide");
+  shuffleQuestions = questions.sort(() => Math.random() - .5);
+  currentQuestionIndex = 0;
   questionContainerEl.classList.remove("hide");
   nextQuestion();
 }
 
 function nextQuestion() {
+  showQuestion(shuffleQuestions[currentQuestionIndex]);
+}
 
+function showQuestion(question) {
+  questionEl.innerText = question.question
 }
 
 function selectAnswer() {
