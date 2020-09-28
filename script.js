@@ -35,6 +35,7 @@ var end = document.getElementById("end");
 var endScore = document.getElementById("score");
 var initials = document.getElementById("initials");
 var endBtn = document.getElementById("submit-btn");
+var shuffledQuestions = questions[Math.floor(Math.random() * questions.length)];
 
 startBtn.addEventListener("click", function() {
   startEl.setAttribute("class", "hide");
@@ -58,7 +59,7 @@ timer = setInterval(function() {
 
 //function to get/display current question
 function currentQuestion() {
-  
+   
 };
 //function to capture when user clicks on answer buttons
   //check: did the user get the question right? (if/else)
