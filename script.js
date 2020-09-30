@@ -25,11 +25,12 @@ const questions = [{
 }];
 
 const startButton = document.getElementById("start-btn");
-const nextButton = document.getElementById("next-btn");
 const questionContainerEl = document.getElementById("question-container");
 let shuffleQuestions, currentQuestionIndex;
 const questionEl = document.getElementById("question")
 const answerButtonsEl = document.getElementById("answer-buttons")
+var buttonsHere = document.getElementById('answer-buttons')
+var answerButtons = document.getElementsByClassName("btn")
 
 startButton.addEventListener("click", startGame)
 
@@ -47,6 +48,15 @@ function nextQuestion() {
 
 function showQuestion(question) {
   questionEl.innerText = question.question
+  for (let i = 0; i < questions.length; i++) {
+    for (let j = 0; j < questions[i].answers.length; j++) {
+      var newButton = document.createElement('button');
+      newButton.textContent = questions[i].answers[j];
+      buttonsHere.appendChild(newButton);
+      answerButtons.classList.add("hide");
+
+    }
+  }
 
 };
 
