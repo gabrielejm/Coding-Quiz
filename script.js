@@ -29,9 +29,11 @@ const questionContainerEl = document.getElementById("question-container");
 let shuffleQuestions, currentQuestionIndex;
 const questionEl = document.getElementById("question")
 const answerButtonsEl = document.getElementById("answer-buttons")
-var buttonsHere = document.getElementById('answer-buttons')
-var answerButtons = document.getElementsByClassName("btn")
-var endScore
+let buttonsHere = document.getElementById('answer-buttons')
+let answerButtons = document.getElementsByClassName("btn")
+let endScore = 0;
+
+
 
 startButton.addEventListener("click", startGame)
 
@@ -46,8 +48,8 @@ function startGame() {
 
 
 function nextQuestion() {
-  currentQuestionIndex++;
   showQuestion(shuffleQuestions[currentQuestionIndex]);
+  currentQuestionIndex++;
 };
 
 function showQuestion(question) {
@@ -65,7 +67,7 @@ function showQuestion(question) {
 
 
 
-// function selectAnswer() {
+function selectAnswer() {}
 //   document.addEventListener("click", function() {
 //     document.getElementById("btn-1, btn-2, btn-3, btn-4");
 //       if ( === questions.question.answers.correct) {
