@@ -43,23 +43,22 @@ function startGame() {
 };
 
 function nextQuestion() {
+  currentQuestionIndex++;
   showQuestion(shuffleQuestions[currentQuestionIndex]);
 };
 
 function showQuestion(question) {
   questionEl.innerText = question.question
-  for (let i = 0; i < questions.length; i++) {
-    for (let j = 0; j < questions[i].answers.length; j++) {
-      var newButton = document.createElement('button');
-      newButton.textContent = questions[i].answers[j];
-      buttonsHere.appendChild(newButton);
-      answerButtons.classList.add("hide");
-
-    }
-  }
+  document.getElementById("btn-1").textContent = questions[currentQuestionIndex].answers[0];
+  document.getElementById("btn-2").textContent = questions[currentQuestionIndex].answers[1];
+  document.getElementById("btn-3").textContent = questions[currentQuestionIndex].answers[2];
+  document.getElementById("btn-4").textContent = questions[currentQuestionIndex].answers[3];
 
 };
-
+  document.getElementById("btn-1").addEventListener("click", nextQuestion);
+  document.getElementById("btn-2").addEventListener("click", nextQuestion);
+  document.getElementById("btn-3").addEventListener("click", nextQuestion);
+  document.getElementById("btn-4").addEventListener("click", nextQuestion);
 
 
 
