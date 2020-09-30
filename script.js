@@ -4,22 +4,22 @@ const questions = [{
   correct: "Brendan Eich"
 },
 {
-  question:"Inside which HTML element do we write Javascript?",
+  question: "Inside which HTML element do we write Javascript?",
   answers: ["<body>", "<scripting>", "<script>", "<javascript>"],
   correct: "<script>"
 },
 {
-  question:"How do you create a function in Javascript?",
+  question: "How do you create a function in Javascript?",
   answers: ["function = myFunction()", "myFunction() = function", "function:myFunction()", "function myFunction()"],
   correct: "function myFunction()"
 },
 {
-  question:"Which symbol is used to wrap an array?",
+  question: "Which symbol is used to wrap an array?",
   answers: ["[]", "()", "{}", "//"],
   correct: "[]"
 },
 {
-  question:"How do you declare a Javascript variable?",
+  question: "How do you declare a Javascript variable?",
   answers: ["variable = myName;", " v myName;", "var myName;", "variable myName;"],
   correct: "var myName;"
 }];
@@ -31,6 +31,7 @@ const questionEl = document.getElementById("question")
 const answerButtonsEl = document.getElementById("answer-buttons")
 var buttonsHere = document.getElementById('answer-buttons')
 var answerButtons = document.getElementsByClassName("btn")
+var endScore
 
 startButton.addEventListener("click", startGame)
 
@@ -42,13 +43,15 @@ function startGame() {
   nextQuestion();
 };
 
+
+
 function nextQuestion() {
   currentQuestionIndex++;
   showQuestion(shuffleQuestions[currentQuestionIndex]);
 };
 
 function showQuestion(question) {
-  questionEl.innerText = question.question
+  questionEl.innerText = question.question;
   document.getElementById("btn-1").textContent = questions[currentQuestionIndex].answers[0];
   document.getElementById("btn-2").textContent = questions[currentQuestionIndex].answers[1];
   document.getElementById("btn-3").textContent = questions[currentQuestionIndex].answers[2];
@@ -62,6 +65,13 @@ function showQuestion(question) {
 
 
 
-function selectAnswer() {
+// function selectAnswer() {
+//   document.addEventListener("click", function() {
+//     document.getElementById("btn-1, btn-2, btn-3, btn-4");
+//       if ( === questions.question.answers.correct) {
+        
+//       }
+//   })};
 
-}
+  
+
