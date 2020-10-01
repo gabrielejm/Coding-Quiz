@@ -32,6 +32,11 @@ const answerButtonsEl = document.getElementById("answer-buttons")
 let buttonsHere = document.getElementById('answer-buttons')
 let answerButtons = document.getElementsByClassName("btn")
 let endScore = 0;
+let questionsLeft;
+let endScreen;
+let isCorrect;
+let seconds = 90;
+
 
 
 
@@ -65,15 +70,42 @@ function showQuestion(question) {
   document.getElementById("btn-3").addEventListener("click", nextQuestion);
   document.getElementById("btn-4").addEventListener("click", nextQuestion);
 
-
-
-function selectAnswer() {}
-//   document.addEventListener("click", function() {
-//     document.getElementById("btn-1, btn-2, btn-3, btn-4");
-//       if ( === questions.question.answers.correct) {
-        
-//       }
-//   })};
-
+function endGame() {
   
+  
+};
+
+
+
+
+
+function selectAnswer() {
+  document.addEventListener("click", function() {
+    document.getElementById("btn-1, btn-2, btn-3, btn-4");
+      if (questions.correct) {
+        endScore++;
+        isCorrect = document.getElementById("message-container");
+        isCorrect.innerHTML = "Correct!"
+       } 
+       else if (!questions.correct) {
+         seconds = seconds - 10;
+         correctOrNot.innerHTML = "Incorrect!"
+       } else {
+         
+         endGame();
+       }
+
+      
+  })};
+
+  function Mytimer() {
+    timer = setInterval(function() {
+      seconds--;
+      document.getElementById("timer").textContent = seconds;
+      if (seconds === 0) {
+        clearInterval(timer);
+        endGame();
+    }}, 3000);
+  };
+
 

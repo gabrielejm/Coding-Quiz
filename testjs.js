@@ -61,4 +61,16 @@
           buttonsHere.appendChild(newButton);
         });
       });
+
+      
+      
+      function Mytimer() {
+        timer = setInterval(function() {
+          seconds--;
+          document.getElementById("timer").textContent = seconds;
+          if (seconds === 0) {
+            clearInterval(timer);
+            endGame();
+        }}, 3000);
+      };
   
